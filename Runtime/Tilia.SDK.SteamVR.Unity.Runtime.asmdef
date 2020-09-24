@@ -1,0 +1,23 @@
+{
+    "name": "Tilia.SDK.SteamVR.Unity.Runtime",
+    "references": [
+        "Zinnia.Runtime",
+        "SteamVR",
+        "SteamVR_Actions"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Malimbe.PropertySerializationAttribute.dll",
+        "Malimbe.XmlDocumentationAttribute.dll",
+        "Malimbe.MemberChangeMethod.dll",
+        "Malimbe.MemberClearanceMethod.dll",
+        "Malimbe.BehaviourStateRequirementMethod.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}
