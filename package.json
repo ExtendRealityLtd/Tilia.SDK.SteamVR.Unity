@@ -1,20 +1,21 @@
 {
-    "name": "io.extendreality.tilia.{scope}.{feature}.{platform?}",
-    "displayName": "Tilia {scope}.{feature}.{platform?}",
-    "description": "{Description of feature.}",
+    "name": "io.extendreality.tilia.sdk.steamvr.unity",
+    "displayName": "Tilia SDK SteamVR Unity",
+    "description": "SDK Wrappers for the SteamVR Unity asset.",
     "version": "1.0.0",
-    "unity": "2018.3",
-    "unityRelease": "10f1",
+    "unity": "2019.1",
+    "unityRelease": "8f1",
     "keywords": [
-        "pattern"
+        "sdk",
+        "wrapper"
     ],
-    "homepage": "https://github.com/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}/",
+    "homepage": "https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR .Unity/",
     "bugs": {
-        "url": "https://github.com/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}/issues"
+        "url": "https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/issues"
     },
     "repository": {
         "type": "git",
-        "url": "ssh://git@github.com/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}.git"
+        "url": "ssh://git@github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity.git"
     },
     "license": "MIT",
     "author": {
@@ -23,7 +24,7 @@
         "url": "https://github.com/ExtendRealityLtd"
     },
     "dependencies": {
-        "io.extendreality.zinnia.unity": "X.Y.Z"
+        "io.extendreality.zinnia.unity": "1.24.0"
     },
     "files": [
         "*.md",
@@ -31,6 +32,7 @@
         "*.asmdef",
         "*.xml",
         "Documentation",
-        "Runtime"
+        "Runtime",
+        "docfx.json"
     ]
 }
