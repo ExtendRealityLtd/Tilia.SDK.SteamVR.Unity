@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v1.1.0...v1.1.1) (2020-10-02)
+
+#### Bug Fixes
+
+* **Haptics:** hook up haptic profiles to Linked Alias Collection ([2f4e0b0](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/commit/2f4e0b07f772d08664e460caeb81e4cc1dbe21c6))
+  > The haptic profile lists have now been hooked up to the LinkedAliasAssociationCollection properties so they can be accessed as expected.
+
 ## [1.1.0](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v1.0.0...v1.1.0) (2020-10-02)
 
 #### Features
