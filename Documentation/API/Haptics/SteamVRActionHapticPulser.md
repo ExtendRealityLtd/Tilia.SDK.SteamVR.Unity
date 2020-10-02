@@ -58,7 +58,7 @@ public float Duration { get; set; }
 
 #### Frequency
 
-The frequency between each pulse.
+The frequency in which the haptic motor will bounce.
 
 ##### Declaration
 
