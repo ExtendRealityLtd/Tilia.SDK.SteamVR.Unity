@@ -1134,11 +1134,11 @@ MonoBehaviour:
   leftController: {fileID: 7020776747715326499}
   leftControllerVelocityTracker: {fileID: 7020776747689712097}
   leftControllerHapticProcess: {fileID: 7020776748095725104}
-  leftControllerHapticProfiles: {fileID: 0}
+  leftControllerHapticProfiles: {fileID: 712874329711411697}
   rightController: {fileID: 7020776747715491845}
   rightControllerVelocityTracker: {fileID: 7020776747885205031}
   rightControllerHapticProcess: {fileID: 7020776749208407665}
-  rightControllerHapticProfiles: {fileID: 0}
+  rightControllerHapticProfiles: {fileID: 4712721607143376749}
 --- !u!1 &7020776747885205029
 GameObject:
   m_ObjectHideFlags: 0
