@@ -1,5 +1,17 @@
 # Changelog
 
+### [1.1.3](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v1.1.2...v1.1.3) (2020-11-09)
+
+#### Bug Fixes
+
+* **README.md:** remove trailing line ([969972d](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/commit/969972d5d0db9ea185faf248edd56c0bb8c5d9b4))
+  > Remove the trailing line at end of readme
+
+#### Miscellaneous Chores
+
+* **structure:** exclude Android platform ([6956edc](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/commit/6956edc76b1f11515d6ed3686b8027461d9ed11d))
+  > As SteamVR and its plugin is not available on android platform, exclude it from the assembly definition.
+
 ### [1.1.2](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v1.1.1...v1.1.2) (2020-11-01)
 
 #### Miscellaneous Chores
