@@ -53,6 +53,5 @@ Code released under the [MIT License][License].
 [Releases]: ../../releases
 [Contributing guidelines]: https://github.com/ExtendRealityLtd/.github/blob/master/CONTRIBUTING.md
 [Code of Conduct]: https://github.com/ExtendRealityLtd/.github/blob/master/CODE_OF_CONDUCT.md
-
 [SteamVR]: https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647
 [Unity]: https://unity3d.com/
