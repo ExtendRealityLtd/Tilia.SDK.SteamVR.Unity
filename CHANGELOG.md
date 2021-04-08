@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.13](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v1.1.12...v1.1.13) (2021-04-08)
+
+#### Bug Fixes
+
+* **FodyWeavers.xml:** add missing weaver file ([6ada0c6](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/commit/6ada0c6c5fc9eaf8572dc479048d33df5a5a6403))
+  > There was no FodyWeavers file with this repo and it was purely piggy backing on other fody weaver files from other repos, which would mean it would no longer work as the other repos have had their regex tightened to prevent bleeding between repos.
+
 ### [1.1.12](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v1.1.11...v1.1.12) (2021-04-07)
 
 #### Miscellaneous Chores
