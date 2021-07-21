@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.20](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v1.1.19...v1.1.20) (2021-07-21)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.zinnia.unity from 1.38.0 to 1.38.1 ([874b865](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/commit/874b865a86c0b705309d6a33f3be74d507a1d8df))
+  > Bumps [io.extendreality.zinnia.unity](https://github.com/ExtendRealityLtd/Zinnia.Unity) from 1.38.0 to 1.38.1. - [Release notes](https://github.com/ExtendRealityLtd/Zinnia.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Zinnia.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Zinnia.Unity/compare/v1.38.0...v1.38.1)
+
 ### [1.1.19](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v1.1.18...v1.1.19) (2021-07-19)
 
 #### Miscellaneous Chores
