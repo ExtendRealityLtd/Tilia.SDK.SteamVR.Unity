@@ -9,7 +9,7 @@
         "sdk",
         "wrapper"
     ],
-    "homepage": "https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR .Unity/",
+    "homepage": "https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/",
     "bugs": {
         "url": "https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/issues"
     },
@@ -33,6 +33,7 @@
         "*.xml",
         "Documentation",
         "Runtime",
+        "Editor",
         "docfx.json"
     ]
 }
