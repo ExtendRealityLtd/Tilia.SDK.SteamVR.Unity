@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.2.0](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v1.1.27...v1.2.0) (2022-02-10)
+
+#### Features
+
+* **Tracking:** add device details records for steam devices ([2d37837](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/commit/2d37837066854e78eadce697ce91a1b01200876b))
+  > The new SteamVRInputSourceRecord provides a very basic implementation of the device details record for the SteamVR CameraRig. It doesn't currently use any of the SteamVR library functionality to determine details and instead relies on what is provided by the Unity libraries.
+  > 
+  > This should be updated in the future as this is just a temporary solution.
+* **Utility:** add prefab creator ([4467c2c](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/commit/4467c2cf4050abdb2934f3ee8a248f5dc4a470d8))
+  > The PrefabCreator class allows quick adding of the SteamVR CameraRig from the Tilia Unity menu.
+
 ### [1.1.27](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v1.1.26...v1.1.27) (2022-02-05)
 
 #### Miscellaneous Chores
