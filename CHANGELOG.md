@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v1.2.1...v1.3.0) (2022-03-02)
+
+#### Features
+
+* **package.json:** add information urls to package ([bd608b6](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/commit/bd608b6f938aabdd202f477f59e8c4f022d827f4))
+  > The changelog, documentation and license url has been added to the package.json as these are used within the Unity package manager.
+
 ### [1.2.1](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v1.2.0...v1.2.1) (2022-02-14)
 
 #### Miscellaneous Chores
