@@ -12,13 +12,7 @@
     ],
     "allowUnsafeCode": false,
     "overrideReferences": true,
-    "precompiledReferences": [
-        "Malimbe.PropertySerializationAttribute.dll",
-        "Malimbe.XmlDocumentationAttribute.dll",
-        "Malimbe.MemberChangeMethod.dll",
-        "Malimbe.MemberClearanceMethod.dll",
-        "Malimbe.BehaviourStateRequirementMethod.dll"
-    ],
+    "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
     "versionDefines": []

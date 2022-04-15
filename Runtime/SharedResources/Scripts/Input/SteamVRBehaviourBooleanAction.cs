@@ -1,23 +1,53 @@
 ﻿namespace Tilia.SDK.SteamVR.Input
 {
-    using Malimbe.MemberChangeMethod;
-    using Malimbe.MemberClearanceMethod;
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
+    using UnityEngine;
     using Valve.VR;
     using Zinnia.Action;
+    using Zinnia.Extension;
 
     /// <summary>
     /// Listens for the linked boolean behavior and emits the appropriate action.
     /// </summary>
     public class SteamVRBehaviourBooleanAction : BooleanAction
     {
+        [Tooltip("The SteamVR Boolean Behavior to link this action to.")]
+        [SerializeField]
+        private SteamVR_Behaviour_Boolean linkedBooleanBehaviour;
         /// <summary>
         /// The SteamVR Boolean Behavior to link this action to.
         /// </summary>
-        [Serialized, Cleared]
-        [field: DocumentedByXml]
-        SteamVR_Behaviour_Boolean LinkedBooleanBehaviour { get; set; }
+        public SteamVR_Behaviour_Boolean LinkedBooleanBehaviour
+        {
+            get
+            {
+                return linkedBooleanBehaviour;
+            }
+            set
+            {
+                if (this.IsMemberChangeAllowed())
+                {
+                    OnBeforeLinkedBooleanBehaviourChange();
+                }
+                linkedBooleanBehaviour = value;
+                if (this.IsMemberChangeAllowed())
+                {
+                    OnAfterLinkedBooleanBehaviourChange();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Clears <see cref="LinkedBooleanBehaviour"/>.
+        /// </summary>
+        public virtual void ClearLinkedBooleanBehaviour()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            LinkedBooleanBehaviour = default;
+        }
 
         protected override void OnEnable()
         {
@@ -73,7 +103,6 @@
         /// <summary>
         /// Called before <see cref="LinkedBooleanBehaviour"/> has been changed.
         /// </summary>
-        [CalledBeforeChangeOf(nameof(LinkedBooleanBehaviour))]
         protected virtual void OnBeforeLinkedBooleanBehaviourChange()
         {
             UnregisterListeners();
@@ -82,7 +111,6 @@
         /// <summary>
         /// Called after <see cref="LinkedBooleanBehaviour"/> has been changed.
         /// </summary>
-        [CalledAfterChangeOf(nameof(LinkedBooleanBehaviour))]
         protected virtual void OnAfterLinkedBooleanBehaviourChange()
         {
             RegisterListeners();

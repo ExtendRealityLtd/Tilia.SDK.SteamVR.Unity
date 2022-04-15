@@ -1,7 +1,5 @@
 ﻿namespace Tilia.SDK.SteamVR.Tracking.Velocity
 {
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using UnityEngine;
     using Valve.VR;
     using Zinnia.Tracking.Velocity;
@@ -11,18 +9,40 @@
     /// </summary>
     public class SteamVRBehaviourVelocityEstimator : VelocityTracker
     {
+        [Tooltip("The SteamVR_Behaviour_Pose to track velocity for.")]
+        [SerializeField]
+        private SteamVR_Behaviour_Pose velocitySource;
         /// <summary>
         /// The <see cref="SteamVR_Behaviour_Pose"/> to track velocity for.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public SteamVR_Behaviour_Pose VelocitySource { get; set; }
+        public SteamVR_Behaviour_Pose VelocitySource
+        {
+            get
+            {
+                return velocitySource;
+            }
+            set
+            {
+                velocitySource = value;
+            }
+        }
+        [Tooltip("An optional GameObject to consider the source relative to when retrieving velocities.")]
+        [SerializeField]
+        private GameObject relativeTo;
         /// <summary>
         /// An optional <see cref="GameObject"/> to consider the source relative to when retrieving velocities.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public GameObject RelativeTo { get; set; }
+        public GameObject RelativeTo
+        {
+            get
+            {
+                return relativeTo;
+            }
+            set
+            {
+                relativeTo = value;
+            }
+        }
 
         /// <inheritdoc />
         public override bool IsActive()

@@ -7,7 +7,11 @@ Listens for the linked Vector3 behavior and emits the appropriate action.
 * [Inheritance]
 * [Namespace]
 * [Syntax]
+* [Properties]
+  * [AxisValue]
+  * [LinkedVector3Behaviour]
 * [Methods]
+  * [ClearLinkedVector3Behaviour()]
   * [Listener(SteamVR\_Behaviour\_Vector3, SteamVR\_Input\_Sources, Vector3, Vector3)]
   * [OnAfterLinkedVector3BehaviourChange()]
   * [OnBeforeLinkedVector3BehaviourChange()]
@@ -33,7 +37,39 @@ Listens for the linked Vector3 behavior and emits the appropriate action.
 public class SteamVRBehaviourVector3Action : Vector3Action
 ```
 
+### Properties
+
+#### AxisValue
+
+The value to receive from the axis data.
+
+##### Declaration
+
+```
+public SteamVRBehaviourVector3Action.ValueType AxisValue { get; set; }
+```
+
+#### LinkedVector3Behaviour
+
+The SteamVR Vector3 Behavior to link this action to.
+
+##### Declaration
+
+```
+public SteamVR_Behaviour_Vector3 LinkedVector3Behaviour { get; set; }
+```
+
 ### Methods
+
+#### ClearLinkedVector3Behaviour()
+
+Clears [LinkedVector3Behaviour].
+
+##### Declaration
+
+```
+public virtual void ClearLinkedVector3Behaviour()
+```
 
 #### Listener(SteamVR\_Behaviour\_Vector3, SteamVR\_Input\_Sources, Vector3, Vector3)
 
@@ -56,7 +92,7 @@ protected virtual void Listener(SteamVR_Behaviour_Vector3 action, SteamVR_Input_
 
 #### OnAfterLinkedVector3BehaviourChange()
 
-Called after Tilia.SDK.SteamVR.Input.SteamVRBehaviourVector3Action.LinkedVector3Behaviour has been changed.
+Called after [LinkedVector3Behaviour] has been changed.
 
 ##### Declaration
 
@@ -66,7 +102,7 @@ protected virtual void OnAfterLinkedVector3BehaviourChange()
 
 #### OnBeforeLinkedVector3BehaviourChange()
 
-Called before Tilia.SDK.SteamVR.Input.SteamVRBehaviourVector3Action.LinkedVector3Behaviour has been changed.
+Called before [LinkedVector3Behaviour] has been changed.
 
 ##### Declaration
 
@@ -92,7 +128,7 @@ protected override void OnEnable()
 
 #### RegisterListeners()
 
-Registers the listeners against the Tilia.SDK.SteamVR.Input.SteamVRBehaviourVector3Action.LinkedVector3Behaviour.
+Registers the listeners against the [LinkedVector3Behaviour].
 
 ##### Declaration
 
@@ -102,7 +138,7 @@ protected virtual void RegisterListeners()
 
 #### UnregisterListeners()
 
-Unregisters the listeners against the Tilia.SDK.SteamVR.Input.SteamVRBehaviourVector3Action.LinkedVector3Behaviour.
+Unregisters the listeners against the [LinkedVector3Behaviour].
 
 ##### Declaration
 
@@ -111,10 +147,20 @@ protected virtual void UnregisterListeners()
 ```
 
 [Tilia.SDK.SteamVR.Input]: README.md
+[SteamVRBehaviourVector3Action.ValueType]: SteamVRBehaviourVector3Action.ValueType.md
+[LinkedVector3Behaviour]: SteamVRBehaviourVector3Action.md#LinkedVector3Behaviour
+[LinkedVector3Behaviour]: SteamVRBehaviourVector3Action.md#LinkedVector3Behaviour
+[LinkedVector3Behaviour]: SteamVRBehaviourVector3Action.md#LinkedVector3Behaviour
+[LinkedVector3Behaviour]: SteamVRBehaviourVector3Action.md#LinkedVector3Behaviour
+[LinkedVector3Behaviour]: SteamVRBehaviourVector3Action.md#LinkedVector3Behaviour
 [Inheritance]: #Inheritance
 [Namespace]: #Namespace
 [Syntax]: #Syntax
+[Properties]: #Properties
+[AxisValue]: #AxisValue
+[LinkedVector3Behaviour]: #LinkedVector3Behaviour
 [Methods]: #Methods
+[ClearLinkedVector3Behaviour()]: #ClearLinkedVector3Behaviour
 [Listener(SteamVR\_Behaviour\_Vector3, SteamVR\_Input\_Sources, Vector3, Vector3)]: #ListenerSteamVR\_Behaviour\_Vector3-SteamVR\_Input\_Sources-Vector3-Vector3
 [OnAfterLinkedVector3BehaviourChange()]: #OnAfterLinkedVector3BehaviourChange
 [OnBeforeLinkedVector3BehaviourChange()]: #OnBeforeLinkedVector3BehaviourChange

@@ -1,7 +1,6 @@
 ﻿namespace Tilia.SDK.SteamVR.Tracking.CameraRig
 {
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
+    using UnityEngine;
     using UnityEngine.XR;
     using Valve.VR;
     using Zinnia.Extension;
@@ -13,12 +12,23 @@
     /// </summary>
     public class SteamVRInputSourceRecord : BaseDeviceDetailsRecord
     {
+        [Tooltip("The SteamVR Input Source.")]
+        [SerializeField]
+        private SteamVR_Input_Sources inputSource;
         /// <summary>
-        /// The SteamVR Input Source
+        /// The SteamVR Input Source.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public SteamVR_Input_Sources InputSource { get; set; }
+        public SteamVR_Input_Sources InputSource
+        {
+            get
+            {
+                return inputSource;
+            }
+            set
+            {
+                inputSource = value;
+            }
+        }
 
         /// <inheritdoc/>
         public override XRNode XRNodeType { get => ConvertFromInputSource(InputSource); protected set => throw new System.NotImplementedException(); }

@@ -7,7 +7,10 @@ Listens for the linked boolean behavior and emits the appropriate action.
 * [Inheritance]
 * [Namespace]
 * [Syntax]
+* [Properties]
+  * [LinkedBooleanBehaviour]
 * [Methods]
+  * [ClearLinkedBooleanBehaviour()]
   * [Listener(SteamVR\_Behaviour\_Boolean, SteamVR\_Input\_Sources, Boolean)]
   * [OnAfterLinkedBooleanBehaviourChange()]
   * [OnBeforeLinkedBooleanBehaviourChange()]
@@ -33,7 +36,29 @@ Listens for the linked boolean behavior and emits the appropriate action.
 public class SteamVRBehaviourBooleanAction : BooleanAction
 ```
 
+### Properties
+
+#### LinkedBooleanBehaviour
+
+The SteamVR Boolean Behavior to link this action to.
+
+##### Declaration
+
+```
+public SteamVR_Behaviour_Boolean LinkedBooleanBehaviour { get; set; }
+```
+
 ### Methods
+
+#### ClearLinkedBooleanBehaviour()
+
+Clears [LinkedBooleanBehaviour].
+
+##### Declaration
+
+```
+public virtual void ClearLinkedBooleanBehaviour()
+```
 
 #### Listener(SteamVR\_Behaviour\_Boolean, SteamVR\_Input\_Sources, Boolean)
 
@@ -55,7 +80,7 @@ protected virtual void Listener(SteamVR_Behaviour_Boolean action, SteamVR_Input_
 
 #### OnAfterLinkedBooleanBehaviourChange()
 
-Called after Tilia.SDK.SteamVR.Input.SteamVRBehaviourBooleanAction.LinkedBooleanBehaviour has been changed.
+Called after [LinkedBooleanBehaviour] has been changed.
 
 ##### Declaration
 
@@ -65,7 +90,7 @@ protected virtual void OnAfterLinkedBooleanBehaviourChange()
 
 #### OnBeforeLinkedBooleanBehaviourChange()
 
-Called before Tilia.SDK.SteamVR.Input.SteamVRBehaviourBooleanAction.LinkedBooleanBehaviour has been changed.
+Called before [LinkedBooleanBehaviour] has been changed.
 
 ##### Declaration
 
@@ -91,7 +116,7 @@ protected override void OnEnable()
 
 #### RegisterListeners()
 
-Registers the listeners against the Tilia.SDK.SteamVR.Input.SteamVRBehaviourBooleanAction.LinkedBooleanBehaviour.
+Registers the listeners against the [LinkedBooleanBehaviour].
 
 ##### Declaration
 
@@ -101,7 +126,7 @@ protected virtual void RegisterListeners()
 
 #### UnregisterListeners()
 
-Unregisters the listeners against the Tilia.SDK.SteamVR.Input.SteamVRBehaviourBooleanAction.LinkedBooleanBehaviour.
+Unregisters the listeners against the [LinkedBooleanBehaviour].
 
 ##### Declaration
 
@@ -110,10 +135,18 @@ protected virtual void UnregisterListeners()
 ```
 
 [Tilia.SDK.SteamVR.Input]: README.md
+[LinkedBooleanBehaviour]: SteamVRBehaviourBooleanAction.md#LinkedBooleanBehaviour
+[LinkedBooleanBehaviour]: SteamVRBehaviourBooleanAction.md#LinkedBooleanBehaviour
+[LinkedBooleanBehaviour]: SteamVRBehaviourBooleanAction.md#LinkedBooleanBehaviour
+[LinkedBooleanBehaviour]: SteamVRBehaviourBooleanAction.md#LinkedBooleanBehaviour
+[LinkedBooleanBehaviour]: SteamVRBehaviourBooleanAction.md#LinkedBooleanBehaviour
 [Inheritance]: #Inheritance
 [Namespace]: #Namespace
 [Syntax]: #Syntax
+[Properties]: #Properties
+[LinkedBooleanBehaviour]: #LinkedBooleanBehaviour
 [Methods]: #Methods
+[ClearLinkedBooleanBehaviour()]: #ClearLinkedBooleanBehaviour
 [Listener(SteamVR\_Behaviour\_Boolean, SteamVR\_Input\_Sources, Boolean)]: #ListenerSteamVR\_Behaviour\_Boolean-SteamVR\_Input\_Sources-Boolean
 [OnAfterLinkedBooleanBehaviourChange()]: #OnAfterLinkedBooleanBehaviourChange
 [OnBeforeLinkedBooleanBehaviourChange()]: #OnBeforeLinkedBooleanBehaviourChange
