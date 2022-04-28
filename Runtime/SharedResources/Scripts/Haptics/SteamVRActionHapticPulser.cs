@@ -1,7 +1,5 @@
 ﻿namespace Tilia.SDK.SteamVR.Haptics
 {
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using UnityEngine;
     using Valve.VR;
     using Zinnia.Haptics;
@@ -11,36 +9,92 @@
     /// </summary>
     public class SteamVRActionHapticPulser : HapticPulser
     {
+        [Tooltip("The vibration action to activate.")]
+        [SerializeField]
+        private SteamVR_Action_Vibration vibrationAction;
         /// <summary>
         /// The vibration action to activate.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public SteamVR_Action_Vibration VibrationAction { get; set; }
+        public SteamVR_Action_Vibration VibrationAction
+        {
+            get
+            {
+                return vibrationAction;
+            }
+            set
+            {
+                vibrationAction = value;
+            }
+        }
+        [Tooltip("The controller to pulse.")]
+        [SerializeField]
+        private SteamVR_Input_Sources controller = SteamVR_Input_Sources.Any;
         /// <summary>
         /// The controller to pulse.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public SteamVR_Input_Sources Controller { get; set; } = SteamVR_Input_Sources.Any;
+        public SteamVR_Input_Sources Controller
+        {
+            get
+            {
+                return controller;
+            }
+            set
+            {
+                controller = value;
+            }
+        }
+        [Tooltip("The duration to pulse Controller for.")]
+        [SerializeField]
+        private float duration = 0.1f;
         /// <summary>
         /// The duration to pulse <see cref="Controller"/> for.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public float Duration { get; set; } = 0.1f;
+        public float Duration
+        {
+            get
+            {
+                return duration;
+            }
+            set
+            {
+                duration = value;
+            }
+        }
+        [Tooltip("The frequency in which the haptic motor will bounce.")]
+        [SerializeField]
+        [Range(0f, 320f)]
+        private float frequency = 1f;
         /// <summary>
         /// The frequency in which the haptic motor will bounce.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Range(0f, 320f)]
-        public float Frequency { get; set; } = 1f;
+        public float Frequency
+        {
+            get
+            {
+                return frequency;
+            }
+            set
+            {
+                frequency = value;
+            }
+        }
+        [Tooltip("The duration to wait before starting the pulse.")]
+        [SerializeField]
+        private float startDelay = 0f;
         /// <summary>
         /// The duration to wait before starting the pulse.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public float StartDelay { get; set; } = 0f;
+        public float StartDelay
+        {
+            get
+            {
+                return startDelay;
+            }
+            set
+            {
+                startDelay = value;
+            }
+        }
 
         /// <inheritdoc />
         protected override void DoBegin()

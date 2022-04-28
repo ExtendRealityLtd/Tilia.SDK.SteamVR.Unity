@@ -1,11 +1,9 @@
 ﻿namespace Tilia.SDK.SteamVR.Input
 {
-    using Malimbe.MemberChangeMethod;
-    using Malimbe.MemberClearanceMethod;
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
+    using UnityEngine;
     using Valve.VR;
     using Zinnia.Action;
+    using Zinnia.Extension;
 
     /// <summary>
     /// Listens for the linked single behavior and emits the appropriate action.
@@ -27,18 +25,61 @@
             Delta
         }
 
+        [Tooltip("The SteamVR Single Behavior to link this action to.")]
+        [SerializeField]
+        private SteamVR_Behaviour_Single linkedSingleBehaviour;
         /// <summary>
         /// The SteamVR Single Behavior to link this action to.
         /// </summary>
-        [Serialized, Cleared]
-        [field: DocumentedByXml]
-        SteamVR_Behaviour_Single LinkedSingleBehaviour { get; set; }
+        public SteamVR_Behaviour_Single LinkedSingleBehaviour
+        {
+            get
+            {
+                return linkedSingleBehaviour;
+            }
+            set
+            {
+                if (this.IsMemberChangeAllowed())
+                {
+                    OnBeforeLinkedSingleBehaviourChange();
+                }
+                linkedSingleBehaviour = value;
+                if (this.IsMemberChangeAllowed())
+                {
+                    OnAfterLinkedSingleBehaviourChange();
+                }
+            }
+        }
+        [Tooltip("The value to receive from the axis data.")]
+        [SerializeField]
+        private ValueType axisValue = ValueType.Actual;
         /// <summary>
         /// The value to receive from the axis data.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        ValueType AxisValue { get; set; } = ValueType.Actual;
+        public ValueType AxisValue
+        {
+            get
+            {
+                return axisValue;
+            }
+            set
+            {
+                axisValue = value;
+            }
+        }
+
+        /// <summary>
+        /// Clears <see cref="LinkedSingleBehaviour"/>.
+        /// </summary>
+        public virtual void ClearLinkedSingleBehaviour()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            LinkedSingleBehaviour = default;
+        }
 
         protected override void OnEnable()
         {
@@ -101,7 +142,6 @@
         /// <summary>
         /// Called before <see cref="LinkedSingleBehaviour"/> has been changed.
         /// </summary>
-        [CalledBeforeChangeOf(nameof(LinkedSingleBehaviour))]
         protected virtual void OnBeforeLinkedSingleBehaviourChange()
         {
             UnregisterListeners();
@@ -110,7 +150,6 @@
         /// <summary>
         /// Called after <see cref="LinkedSingleBehaviour"/> has been changed.
         /// </summary>
-        [CalledAfterChangeOf(nameof(LinkedSingleBehaviour))]
         protected virtual void OnAfterLinkedSingleBehaviourChange()
         {
             RegisterListeners();

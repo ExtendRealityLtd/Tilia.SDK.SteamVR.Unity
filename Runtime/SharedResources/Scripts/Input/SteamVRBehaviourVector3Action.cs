@@ -1,12 +1,9 @@
 ﻿namespace Tilia.SDK.SteamVR.Input
 {
-    using Malimbe.MemberChangeMethod;
-    using Malimbe.MemberClearanceMethod;
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using UnityEngine;
     using Valve.VR;
     using Zinnia.Action;
+    using Zinnia.Extension;
 
     /// <summary>
     /// Listens for the linked <see cref="Vector3"/> behavior and emits the appropriate action.
@@ -28,18 +25,61 @@
             Delta
         }
 
+        [Tooltip("The SteamVR Vector3 Behavior to link this action to.")]
+        [SerializeField]
+        private SteamVR_Behaviour_Vector3 linkedVector3Behaviour;
         /// <summary>
         /// The SteamVR Vector3 Behavior to link this action to.
         /// </summary>
-        [Serialized, Cleared]
-        [field: DocumentedByXml]
-        SteamVR_Behaviour_Vector3 LinkedVector3Behaviour { get; set; }
+        public SteamVR_Behaviour_Vector3 LinkedVector3Behaviour
+        {
+            get
+            {
+                return linkedVector3Behaviour;
+            }
+            set
+            {
+                if (this.IsMemberChangeAllowed())
+                {
+                    OnBeforeLinkedVector3BehaviourChange();
+                }
+                linkedVector3Behaviour = value;
+                if (this.IsMemberChangeAllowed())
+                {
+                    OnAfterLinkedVector3BehaviourChange();
+                }
+            }
+        }
+        [Tooltip("The value to receive from the axis data.")]
+        [SerializeField]
+        private ValueType axisValue = ValueType.Actual;
         /// <summary>
         /// The value to receive from the axis data.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        ValueType AxisValue { get; set; } = ValueType.Actual;
+        public ValueType AxisValue
+        {
+            get
+            {
+                return axisValue;
+            }
+            set
+            {
+                axisValue = value;
+            }
+        }
+
+        /// <summary>
+        /// Clears <see cref="LinkedVector3Behaviour"/>.
+        /// </summary>
+        public virtual void ClearLinkedVector3Behaviour()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            LinkedVector3Behaviour = default;
+        }
 
         protected override void OnEnable()
         {
@@ -102,7 +142,6 @@
         /// <summary>
         /// Called before <see cref="LinkedVector3Behaviour"/> has been changed.
         /// </summary>
-        [CalledBeforeChangeOf(nameof(LinkedVector3Behaviour))]
         protected virtual void OnBeforeLinkedVector3BehaviourChange()
         {
             UnregisterListeners();
@@ -111,7 +150,6 @@
         /// <summary>
         /// Called after <see cref="LinkedVector3Behaviour"/> has been changed.
         /// </summary>
-        [CalledAfterChangeOf(nameof(LinkedVector3Behaviour))]
         protected virtual void OnAfterLinkedVector3BehaviourChange()
         {
             RegisterListeners();
