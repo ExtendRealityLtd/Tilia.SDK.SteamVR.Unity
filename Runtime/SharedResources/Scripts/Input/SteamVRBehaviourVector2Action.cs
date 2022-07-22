@@ -103,7 +103,7 @@
                 return;
             }
 
-            LinkedVector2Behaviour.onAxis.AddListener(Listener);
+            LinkedVector2Behaviour.onChange.AddListener(Listener);
         }
 
         /// <summary>
@@ -116,7 +116,7 @@
                 return;
             }
 
-            LinkedVector2Behaviour.onAxis.RemoveListener(Listener);
+            LinkedVector2Behaviour.onChange.RemoveListener(Listener);
         }
 
         /// <summary>
