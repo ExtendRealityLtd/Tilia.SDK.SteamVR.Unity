@@ -103,7 +103,7 @@
                 return;
             }
 
-            LinkedSingleBehaviour.onAxis.AddListener(Listener);
+            LinkedSingleBehaviour.onChange.AddListener(Listener);
         }
 
         /// <summary>
@@ -116,7 +116,7 @@
                 return;
             }
 
-            LinkedSingleBehaviour.onAxis.RemoveListener(Listener);
+            LinkedSingleBehaviour.onChange.RemoveListener(Listener);
         }
 
         /// <summary>
