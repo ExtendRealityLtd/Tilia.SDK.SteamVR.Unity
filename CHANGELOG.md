@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.5](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v2.0.4...v2.0.5) (2022-07-25)
+
+#### Bug Fixes
+
+* **Input:** change action subscribe event to onChange ([096387a](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/commit/096387a1e93e01879847dfab03692ef761d59348))
+  > The onAxis event does not emit changes from axis data when the axis is reset to zero. Switching to the onChange event will ensure even if the axis data changes to zero then the event is still emitted.
+
 ### [2.0.4](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v2.0.3...v2.0.4) (2022-06-16)
 
 #### Miscellaneous Chores
