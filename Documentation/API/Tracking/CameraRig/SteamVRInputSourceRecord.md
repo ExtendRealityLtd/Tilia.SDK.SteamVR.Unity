@@ -8,6 +8,7 @@ Provides the description for a SteamVR Input Source element. TODO: This is a ver
 * [Namespace]
 * [Syntax]
 * [Properties]
+  * [HasPassThroughCamera]
   * [InputSource]
   * [Priority]
   * [XRNodeType]
@@ -33,6 +34,14 @@ public class SteamVRInputSourceRecord : BaseDeviceDetailsRecord
 ```
 
 ### Properties
+
+#### HasPassThroughCamera
+
+##### Declaration
+
+```
+public override bool HasPassThroughCamera { get; protected set; }
+```
 
 #### InputSource
 
@@ -106,6 +115,7 @@ public virtual void SetInputSourceType(int index)
 [Namespace]: #Namespace
 [Syntax]: #Syntax
 [Properties]: #Properties
+[HasPassThroughCamera]: #HasPassThroughCamera
 [InputSource]: #InputSource
 [Priority]: #Priority
 [XRNodeType]: #XRNodeType
