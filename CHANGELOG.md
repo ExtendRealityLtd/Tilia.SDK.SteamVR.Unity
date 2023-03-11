@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v2.0.8...v2.1.0) (2023-03-11)
+
+#### Features
+
+* **DeviceDetails:** add defaults for passthrough camera details ([f0f01bd](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/commit/f0f01bd4cc54106ae2e13560bd8f94d2995b64d8))
+  > The DeviceDetailsRecord now supports passthrough camera options and therefore anything that derrives from that needs to implement the base interfaces even if they don't support camera passthrough yet.
+
 ### [2.0.8](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v2.0.7...v2.0.8) (2023-02-22)
 
 #### Miscellaneous Chores
