@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v2.1.4...v2.2.0) (2023-03-28)
+
+#### Features
+
+* **Tracking:** replace isActiveAndEnabled ([9ae3181](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/commit/9ae318105ea5751ca97720b84357f77e1cd5694c))
+  > The isActiveAndEnabled call has been replaced with CheckIsActiveAndEnabled as this is more consistent.
+
 ### [2.1.4](https://github.com/ExtendRealityLtd/Tilia.SDK.SteamVR.Unity/compare/v2.1.3...v2.1.4) (2023-03-28)
 
 #### Miscellaneous Chores
