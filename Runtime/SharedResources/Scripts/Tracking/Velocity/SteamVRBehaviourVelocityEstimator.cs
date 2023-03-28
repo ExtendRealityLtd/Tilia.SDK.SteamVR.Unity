@@ -2,6 +2,7 @@
 {
     using UnityEngine;
     using Valve.VR;
+    using Zinnia.Extension;
     using Zinnia.Tracking.Velocity;
 
     /// <summary>
@@ -47,7 +48,7 @@
         /// <inheritdoc />
         public override bool IsActive()
         {
-            return gameObject.activeInHierarchy && isActiveAndEnabled;
+            return gameObject.activeInHierarchy && this.CheckIsActiveAndEnabled();
         }
 
         /// <inheritdoc />
